@@ -60,6 +60,9 @@ Gestire il “Database” e la visualizzazione di queste domande e risposte con 
             height: 10px;
             margin: auto;
         }
+        nav{
+            padding-top: 30px;
+        }
         h1{
             font-size: 1.6rem;
             margin: 50px 0;
@@ -94,6 +97,9 @@ Gestire il “Database” e la visualizzazione di queste domande e risposte con 
         li:last-child{
             color: blue;
             border-bottom: 3px solid blue;
+        }
+        li{
+            cursor: pointer;
         }
     </style>
 
