@@ -69,10 +69,54 @@ Gestire il “Database” e la visualizzazione di queste domande e risposte con 
             line-height: 1.5em;
             font-size: 0.95em;
         }
+        .center{
+            width: 70%;
+            margin: auto;
+        }
+        .d_flex{
+            display: flex;
+        }
+        img{
+            height: 40px;
+            margin: 10px;
+        }
+        span{
+            line-height: 50px;
+            vertical-align: middle;
+            font-size: 25px;
+            color: grey;
+        }
+        li{
+            list-style: none;
+            padding: 15px;
+            color: grey;
+        }
+        li:last-child{
+            color: blue;
+            border-bottom: 3px solid blue;
+        }
     </style>
 
     </head>
     <body>
+
+        <nav class="center">
+            <div class="d_flex">
+                <img src="img/logo.png" alt="">
+                <span>Privacy & Termini</span>
+            </div>
+            <div>
+                <ul class="d_flex">
+                    <li>Introduzione</li>
+                    <li>Norme sulla privacy</li>
+                    <li>Termini di servizio</li>
+                    <li>Tecnologie</li>
+                    <li>Domande Frequenti</li>
+                </ul>
+            </div>
+            <hr>
+        </nav>
+
         <div class="container">
             <?php foreach ($paragrafi as $paragrafo => $value) { ?>
                 <h1> <?php echo $value["domanda"]; ?> </h1>
@@ -80,9 +124,8 @@ Gestire il “Database” e la visualizzazione di queste domande e risposte con 
                     <p> <?php echo $value["risposte"][$i]; ?> </p>
                 <?php } ?>
             <?php } ?>
-            
-            
         </div>
+
     </body>
 </html>
 
