@@ -44,17 +44,30 @@ Gestire il “Database” e la visualizzazione di queste domande e risposte con 
         body {
         }
         .container{
-            width:80%;
+            width:70%;
             height: 10px;
-            background: black;
             margin: auto;
+        }
+        p{
+            margin: 25px 0px;
         }
     </style>
 
     </head>
     <body>
         <div class="container">
-
+            <?php foreach ($paragrafi as $paragrafo => $value) { ?>
+                <h1> <?php echo $value["domanda"]; ?> </h1>
+                <?php for ($i = 0; $i < count($value["risposte"]) ; $i++) { ?>
+                    <p> <?php echo $value["risposte"][$i]; ?> </p>
+                <?php } ?>
+            <?php } ?>
+            
+            
         </div>
     </body>
 </html>
+
+
+
+<?php ?>
